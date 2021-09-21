@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1616CC7-DD9E-404C-944B-03E6D5428047}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LapTrinhCoSoDuLieu</RootNamespace>
+    <AssemblyName>LapTrinhCoSoDuLieu</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Nhân viên\DAONhanVien.cs" />
+    <Compile Include="Độc giả\DAOvsBUSDocGia.cs" />
+    <Compile Include="Nhân viên\BUSNhanVien.cs" />
+    <Compile Include="Quản lý mượn trả\DAOvsBUSQuanLyMuonTra.cs" />
+    <Compile Include="Sách\DAOvsBUSSach.cs" />
+    <Compile Include="Đăng nhập\DAOvsBUSLogin.cs" />
+    <Compile Include="Đăng nhập\GUILogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Đăng nhập\GUILogin.Designer.cs">
+      <DependentUpon>GUILogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThuVienDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyThuVienDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Trang chủ\GUIMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trang chủ\GUIMain.Designer.cs">
+      <DependentUpon>GUIMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Độc giả\GUIDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Độc giả\GUIDocGia.Designer.cs">
+      <DependentUpon>GUIDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nhân viên\GUINhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nhân viên\GUINhanVien.Designer.cs">
+      <DependentUpon>GUINhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sách\GUISach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sách\GUISach.Designer.cs">
+      <DependentUpon>GUISach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trang chủ\DAOvsBUSMain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quản lý mượn trả\GUIQuanLyMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quản lý mượn trả\GUIQuanLyMuonTra.Designer.cs">
+      <DependentUpon>GUIQuanLyMuonTra.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Đăng nhập\GUILogin.resx">
+      <DependentUpon>GUILogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trang chủ\GUIMain.resx">
+      <DependentUpon>GUIMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Độc giả\GUIDocGia.resx">
+      <DependentUpon>GUIDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nhân viên\GUINhanVien.resx">
+      <DependentUpon>GUINhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sách\GUISach.resx">
+      <DependentUpon>GUISach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Quản lý mượn trả\GUIQuanLyMuonTra.resx">
+      <DependentUpon>GUIQuanLyMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="QuanLyThuVienDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QuanLyThuVienDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyThuVienDB.dbml.layout">
+      <DependentUpon>QuanLyThuVienDB.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
