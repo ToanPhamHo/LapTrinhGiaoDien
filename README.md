@@ -1,2 +1,2 @@
-# A Library Managing Software On Winform
+# A Library Managing Software on Winform
 
